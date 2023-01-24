@@ -15,7 +15,7 @@ spec:
         app: python-app
     spec:
       containers:
-        - image: ghcr.io/2022-4400-exp/4405-python-app:1851fa2ad3ae237aa23017b709d1d053dda4869a
+        - image: katudon/python-app
           name: python-app
           env:
             - name: PYTHON_DATABASE
