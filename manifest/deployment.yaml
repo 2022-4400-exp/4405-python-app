@@ -15,19 +15,19 @@ spec:
         app: python-app
     spec:
       containers:
-      - image: katudon/python-app
-        name: python-app
-        env:
-        - name: PYTHON_DATABASE
-          value: "mydb"
-        - name: PYTHON_USER
-          value: "tmcit"
-        - name: PYTHON_PASSWORD
-          value: "password"
-        volumeMounts:
-        - mountPath: /var/python-app
-          name: python-data-mount
+        - image: ghcr.io/2022-4400-exp/4405-python-app:1851fa2ad3ae237aa23017b709d1d053dda4869a
+          name: python-app
+          env:
+            - name: PYTHON_DATABASE
+              value: "mydb"
+            - name: PYTHON_USER
+              value: "tmcit"
+            - name: PYTHON_PASSWORD
+              value: "password"
+          volumeMounts:
+            - mountPath: /var/python-app
+              name: python-data-mount
       volumes:
-      - name: python-data-mount
-        persistentVolumeClaim:
-          claimName: python-data
+        - name: python-data-mount
+          persistentVolumeClaim:
+            claimName: python-data
